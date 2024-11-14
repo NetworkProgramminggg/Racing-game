@@ -6,7 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 
-public class RacingGameWithFreeMovement extends JFrame {
+public class RacingGame extends JFrame {
     private static final int TRACK_WIDTH = 600; // 트랙 가로 길이 (픽셀)
     private static final int TRACK_HEIGHT = 400; // 트랙 세로 길이 (픽셀)
     private static final int MOVE_DISTANCE = 20; // 이동 거리
@@ -21,7 +21,7 @@ public class RacingGameWithFreeMovement extends JFrame {
     private JLabel[] obstacleLabels;
     private Random random;
 
-    public RacingGameWithFreeMovement() {
+    public RacingGame() {
         random = new Random(); // 랜덤 객체 초기화
 
         setTitle("네트워크 레이싱 게임 - 자유로운 이동과 장애물 포함");
@@ -133,7 +133,7 @@ public class RacingGameWithFreeMovement extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            RacingGameWithFreeMovement clientUI = new RacingGameWithFreeMovement();
+            RacingGame clientUI = new RacingGame();
             clientUI.setVisible(true);
         });
     }
